@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja bem-vindo Explorador</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="icon" href="/img/icone.png">
+</head>
+<body>
+    <header class="menu">
+        <ul>
+          <li><a href="/html/login.html">Login</a></li>
+          <li><a href="/html/sobre.html">Sobre</a></li>
+          <li><a href="/html/transportadora.html">Transportadores</a></li>
+          <li><a href="/html/home.html">Home</a></li>
+        </ul>
+        <img src="/img/logo.png" width="200px" height="190px">   
+    </header>  
+    <div class="conteudo">
+    <nav class="tema">
+        <p class="texto-1">Explore Purchase Empresa de Transportadora</p> 
+        <button class="botao"><a href="/html/sobre.html">Clique aqui!</a></button>
+        <img class="aviao-plan" src="/img/aviao-planeta.png" width="200px" height="200px">
+        <header class="formulário">
+        <form action="/php/cadastro.php" method="post">
+            <div class="text-form-title">
+                Ficou interessado no nosso sistema?
+                <br>
+                Então crie sua conta já:
+            </div>
+            <div class="basico-input">
+              <div>
+                <br>
+                <label for="nome">Nome:</label>
+                <input required type="text" id="nome"/>
+              </div>
+              <div>
+                <br>
+                <label for="cpf">CPF:</label>
+                <input required type="cpf" id="cpf"/>
+              </div>
+              <div>
+                <br>
+                <label for="telefone">Telefone:</label>
+                <input required type="telefone" id="telefone">
+              <div>
+                <br>
+                <label for="email">E-mail:</label>
+                <input required type="email" id="email"/>
+              </div>
+              <div>
+                <br>
+                <label for="senha">Senha:</label>
+                <input required type="senha" id="senha"/>
+              </div>
+            </div>
+              <div><button class="form-but"><a href="" class="cor-button">Cadastrar-se</a></button></div>
+              <div class="conta-cadastro"><a href="/html/login.html" class="cor-button">Já tem Conta?</a></div>
+          </form>
+    </header>
+    </nav>
+    </div>
+<section class="slideshow-container">
+  <ul class="slides">
+    <li class="slide fade" data-active>
+      <img 
+        src="/img/um-caminhao-com-um-reboque-branco-que-diz-scania-na-lateral.jpg" 
+      />
+    </li>
+    <li class="slide fade">
+      <img 
+        src="/img/um-grande-armazem-com-um-grande-caminhao-no-meio-dele.jpg" 
+      />
+    </li>
+    <li class="slide fade">
+      <img 
+        src="/img/veiculos-na-representacao-da-cadeia-de-suprimentos-de-laptops.jpg" 
+      />
+    </li>
+  </ul>
+  <button class="previous-button" data-change-slide-button="previous">&lt;</button>
+  <button class="next-button" data-change-slide-button="next">&gt;</button>
+</section>
+  <header class="perguntas">
+    <br>
+    <br>
+    <h1>Perguntas Frequentes</h1>
+    <br>
+    <br>
+    <br>
+  <div class="card">
+   <div class="content">
+    <h3>O que é uma Transportadora?</h3>
+    <p>__________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+    <p>A função da transportadora é a de assegurar o transporte sem problemas das mercadorias após ter recebido o envio do expedidor. A transportadora é então responsável por transportar as mercadorias do expedidor e entregá-las ao comprador ou ao consignatário.</p>
+    <p class="spik">__________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+   </div>
+   <button id="read_button"><img src="/img/mais.png" width="30px" height="30px"></button>
+  </div>
+<br>
+<br>
+  <div class="card-2">
+    <div class="content-2">
+    <h3>Como alugar uma vaga?</h3>
+    <p>__________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+    <p>Você deve ir até uma agência dos Correios para informar seu interesse em efetuar o contrato e explicar seu modelo de negócio ou você pode fazer todo o processo de forma online. CNPJ e Contrato Social atualizados.</p>
+    <p class="spik">__________________________________________________________________________________________________________________________________________________________________________________________________________</p> 
+    </div>
+  <button  id="read_button-2"><img src="/img/mais.png" width="30px" height="30px"></button>
+  </div>
+  <br>
+  </header>
+  <footer class="rodape">
+    <p class="contato">Entre em Contato:</p>
+    <img class="posic" src="/img/gmail-logo.webp" width="45px" height="45px">
+    <p class="gmail"> <a href="mailto:"> E-mail: <u>explorepurchase@gmail.com</u></a></p>
+    <img class="posic-2" src="/img/whatsapp-logo.jpg" width="70px" height="70px">
+    <p class="whats">Whatsapp: <u>+55 85 9 9320-5061</u></p>
+  <div class="rodeer">
+    <p class="rod"><a href="">Políticas de Privacidade</a></p>
+    <p class="rod"><a href="">Termos de Uso</a></p>
+    <p class="rod"><a href="/html/sobre.html">Fale Conosco</a></p>
+    <p class="rod"><a href="">Perguntas Frequentes</a></p>
+  </div>
+  <img class="rod-pe" src="/img/logo.png" width="200px" height="200px">
+  </footer>
+  <script src="/js/home.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/home-slide.js"></script>
+</body>
+</html>

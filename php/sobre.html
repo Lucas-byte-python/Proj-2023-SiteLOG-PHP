@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="/css/sobre.css">
+    <link rel="icon" href="icone.png">
+</head>
+<body>
+<style>
+  *{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+    background-color: rgb(226, 218, 218);
+}
+/* Esté é o menu em cima */
+.menu{
+    background-image: url(menu.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: 1950px 200px;
+    background-repeat: no-repeat;
+}
+.menu img{
+    margin-top: -0.7rem;
+    margin-left: 0.7rem;
+}
+ul li{
+    display: inline;
+    float: right;
+    padding-right: 3rem;
+    margin-top: 70px;
+    margin-right: 10px;
+}
+li{
+    font-size: 30px;
+    color: rgb(252, 252, 252);
+    border:4px solid var(--cor-azul);
+    position: relative;
+    text-transform: capitalize;
+    text-decoration:none;
+    color: var(--cor-azul);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: 'open_sansregular';
+    transition:0.4s;
+    text-shadow: 0 0 0.125em rgba(53, 11, 243, 0.5), 0 0 0.25em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--cor-azul), 0 0 0.5em 0 var(--cor-azul);
+}
+li :hover{
+    color: #8A2BE2;
+    transition:0.4s;
+    text-shadow: none;
+}
+li :hover:after {
+    opacity: 1;
+}
+li :hover:before {
+    opacity: 1;
+}
+li :before, li :after {
+    content: "";
+    position: absolute;
+    transition: opacity 100ms linear;
+    background-color: var(--cor-azul);
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.linha-01{
+    background-color: rgb(226, 218, 218);
+    height: 154px;
+}
+.titulo{
+    text-align: center;
+    color: #8A2BE2;
+    font-family: Playfair Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 20px;
+}
+.sub-titulo{
+    text-align: center;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -10px;
+}
+.imagem-pequena{
+    width: 127px;
+    height: 124px;
+    margin-left: 280px;
+    margin-top: -100px;
+    padding: 10px; 
+    animation: go-back 1s infinite alternate;
+}
+@keyframes go-back {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+.imagem-pequena-two{
+    width: 127px;
+    height: 124px;
+    flex-shrink: 0;
+    margin-left: 1055px;
+    margin-top: -200px;
+    padding: 10px;
+    animation: go-back 1s infinite alternate;
+}
+
+.quem-somos{
+    width: 100%;
+    height: 388px;
+}
+.titulos-menores{
+    color: #8A2BE2;
+    text-align: justify;
+    font-family: Playfair Display;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 20px;
+    margin-left: 1150px;
+    margin-top: 20px;
+}
+.pequeno-texto{
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+    margin-left: 900px;
+    margin-right: 200px;
+    padding: 20px;
+}
+.imagens-pequenas{
+    border-radius: 20px;
+    width: 517px;
+    height: 340px;
+    flex-shrink: 0;
+    margin-top: -315px;
+    margin-left: 200px;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.missao{
+    height: 388px;
+    background-color: rgb(226, 218, 218);
+    width: 100%;
+}
+.missao h1{
+    color: #8A2BE2;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-left: 400px;
+    padding: 30px;
+}
+.missao p{
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 100px;
+    margin-right: 900px;
+    padding: 20px;
+}
+.missao img{
+    border-radius: 20px;
+    width: 517px;
+    height: 340px;
+    flex-shrink: 0;
+    margin-top: -315px;
+    margin-left: 1200px;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.ambiente{
+    width: 100%;
+    height: 388px;
+}
+.ambiente h1{
+    color: #8A2BE2;
+    text-align: center;
+    font-family: Playfair Display;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 3px;
+    margin-left: 1050px;
+    margin-right: 350px;
+    margin-top: 10px;
+}
+.ambiente p{
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+    margin-left: 900px;
+    margin-right: 200px;
+    padding: 20px;
+}
+.ambiente img{
+    border-radius: 20px;
+    width: 517px;
+    height: 340px;
+    flex-shrink: 0;
+    margin-top: -415px;
+    margin-left: 200px;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.cliente{
+    width: 100%;
+    height: 388px;
+    background-color: rgb(226, 218, 218);
+}
+.cliente h1{
+    color: #8A2BE2;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-left: 400px;
+    padding: 30px;
+}
+.cliente p{
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 100px;
+    margin-right: 900px;
+    padding: 20px; 
+}
+.cliente img{
+    border-radius: 20px;
+    width: 517px;
+    height: 340px;
+    flex-shrink: 0;
+    margin-top: -315px;
+    margin-left: 1200px;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.confianca{
+    height: 388px;
+    width: 100%;
+}
+.confianca h1{
+    color: #8A2BE2;
+    text-align: center;
+    font-family: Playfair Display;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    padding-top: 20px;
+    line-height: normal;
+    margin-left: 1050px;
+    margin-right: 350px;
+    margin-top: 15px;
+}
+.confianca p{
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+    margin-left: 900px;
+    margin-right: 200px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.confianca img{
+    border-radius: 20px;
+    width: 517px;
+    height: 340px;
+    flex-shrink: 0;
+    margin-top: -310px;
+    margin-left: 200px;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.historia{
+    height: 410px;
+    background-color: rgb(226, 218, 218);
+    width: 100%;
+}
+.historia h1{
+    color: #8A2BE2;
+    text-align: justify;
+    font-family: Playfair Display;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-left: 150px;
+    padding: 10px;
+}
+.historia p{
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+/* Rodapé */
+.rodape{
+    width: 100%;
+    height: 100%;
+    background-image: url(menu.jpg);
+    background-size: 1950px 220px;
+    background-repeat: no-repeat;
+}
+.contato{
+    margin-left: 200px;
+    color: #ffffff;
+    padding: 25px; 
+    font-size: 40px;
+}
+.gmail{
+    margin-left: 80px;
+    margin-top: -40px;
+    color: #ffffff;
+    font-size: 22px;
+}
+.whats{
+    margin-left: 80px;
+    margin-top: -55px;
+    color: #ffffff;
+    font-size: 22px;
+}
+.posic{
+    margin-left: 20px;
+}
+.posic-2{
+    margin-left: 10px;
+}
+.rodeer .rod{
+    margin-left: 1400px;
+    margin-top: -20px;
+    margin-bottom: -50px;
+    font-size: 17px;
+    color: #ffffff;
+}
+.rod-pe{
+    margin-left: 1650px;
+    margin-top: -100px;
+}
+</style>
+    <header class="menu">
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="transportadora.html">Transportadores</a></li>
+          <li><a href="cadastro-home.php">Home</a></li>
+        </ul>
+        <img src="logo.png" width="200px" height="190px">   
+    </header>
+    <header class="linha-01">
+    <h1 class="titulo">Sobre a Explore Purchase</h1>
+    <p class="sub-titulo">Uma empresa de logística focada em melhorar sua vida</p>
+    <img src="pngtree-agricultural-products-export-gradient-linear-vector-icon-logo-item-business-vector-png-image_38519698 2.png" class="imagem-pequena">
+    <img src="pngtree-agricultural-products-export-gradient-linear-vector-icon-logo-item-business-vector-png-image_38519698 2.png" class="imagem-pequena-two">
+    </header>
+    <header class="quem-somos">
+        <h1 class="titulos-menores">Quem Somos?</h1>
+        <p class="pequeno-texto">A Explore Purchase é uma empresa de logística especializada em fornecer soluções eficientes e confiáveis para o transporte e armazenamento de mercadorias. Com uma equipe altamente qualificada e uma ampla rede de parceiros, estamos comprometidos em oferecer serviços de primeira classe aos nossos clientes.</p>
+        <img src="armazenagem-img.webp" class="imagens-pequenas">
+    </header>
+    <div class="missao">
+      <h1>Nossa Missão:</h1>
+      <p>Nossa missão é simplificar a cadeia de suprimentos, tornando o processo de compra e entrega o mais rápido e eficiente possível. Oferecemos uma ampla gama de serviços, incluindo transporte terrestre, marítimo e aéreo, armazenagem, gestão de estoque e distribuição. Nosso objetivo é ajudar nossos clientes a alcançar seus objetivos comerciais, reduzindo custos e melhorando a eficiência operacional.</p>
+      <img src="com.png">
+    </div>
+    <div class="ambiente">
+      <h1>Nossa importância com o meio ambiente:</h1>
+      <p> Além disso, acreditamos na importância da sustentabilidade ambiental. Buscamos constantemente maneiras de reduzir nossa pegada de carbono e promover práticas de transporte mais sustentáveis. Ao escolher a Explore Purchase como seu parceiro de logística, você também está fazendo uma escolha consciente para um futuro mais verde.</p>
+      <img src="sustentabilidade.jpg" alt="">
+    </div>
+    <div class="cliente">
+      <h1>Relação com o Cliente:</h1>
+      <p>Na Explore Purchase, valorizamos a parceria com nossos clientes. Trabalhamos em estreita colaboração com eles para entender suas necessidades específicas e fornecer soluções personalizadas que atendam às suas expectativas. Nossa abordagem centrada no cliente nos permite oferecer um serviço de qualidade superior, garantindo que as mercadorias sejam entregues de forma segura e no prazo.</p>
+      <img src="colaboração.jpg">
+    </div>
+    <div class="confianca">
+      <h1>Confiança:</h1>
+      <p>Se você está procurando uma empresa de logística confiável e comprometida em fornecer soluções de primeira classe, a Explore Purchase é a escolha certa. Entre em contato conosco hoje mesmo para saber mais sobre nossos serviços e como podemos ajudar sua empresa a crescer. Estamos ansiosos para trabalhar com você!</p>
+      <img src="confiança.jpg">
+    </div>
+    <div class="historia">
+      <h1>História:</h1>
+      <p>A história da "Explore Purchase" remonta ao ano de 2005, quando Lucas Santil e João Hélio, dois jovens empreendedores com experiência no setor de logística, decidirão fundar sua própria empresa. Eles perceberão que havia uma demanda crescente por serviços logísticos de qualidade, mas muitas empresas estavam enfrentando desafios para atender a essas demandas de maneira eficiente.
+      <br><br>
+      Com essa percepção, eles reunirão uma equipe de profissionais altamente qualificados e apaixonados pelo setor de logística. Juntos, eles começaram a desenvolver soluções personalizadas para atender às necessidades específicas de cada cliente. A empresa adotou uma abordagem inovadora, utilizando tecnologia de ponta para otimizar os processos de transporte, rastreamento e armazenamento de mercadorias.
+      <br><br>
+      A "Explore Purchase" rapidamente ganhou reconhecimento no mercado de logística, conquistando clientes de diversos setores da indústria. A empresa se destacou pela sua capacidade de oferecer soluções flexíveis e adaptáveis, garantindo a entrega rápida e segura de mercadorias em todo o mundo.
+      <br><br>
+      Ao longo dos anos, a "Explore Purchase" expandiu suas operações, estabelecendo parcerias estratégicas em diferentes países e investindo em infraestrutura de ponta. A empresa continua a se reinventar e a se adaptar às mudanças do mercado, buscando sempre estar na vanguarda da indústria de logística.
+      <br><br>
+      Hoje, a "Explore Purchase" é reconhecida como uma das principais empresas de logística do mundo, oferecendo soluções abrangentes e eficientes para seus clientes. Seu compromisso com a excelência e a inovação permitiu que a empresa crescesse e se tornasse um importante player do setor, atendendo às demandas crescentes de um mercado globalizado e em constante evolução.  </p>
+    </div>
+    <!-- Rodapé -->
+    <header class="rodape">
+        <p class="contato">Entre em Contato:</p>
+        <img class="posic" src="gmail-logo.webp" width="45px" height="45px">
+        <p class="gmail"> <a href="mailto:"> E-mail: <u>explorepurchase@gmail.com</u></a></p>
+        <img class="posic-2" src="whatsapp-logo.jpg" width="70px" height="70px">
+        <p class="whats">Whatsapp: <u>+55 85 9 9320-5061</u></p>
+      <div class="rodeer">
+        <p class="rod"><a href="">Políticas de Privacidade</a></p>
+        <p class="rod"><a href="">Termos de Uso</a></p>
+        <p class="rod"><a href="sobre.html">Fale Conosco</a></p>
+        <p class="rod"><a href="cadastro-home.php">Perguntas Frequentes</a></p>
+      </div>
+      <img class="rod-pe" src="logo.png" width="200px" height="200px">
+      </header>
+</body>
+</html>
