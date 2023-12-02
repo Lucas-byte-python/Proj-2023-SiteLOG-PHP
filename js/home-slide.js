@@ -1,24 +1,41 @@
-const changeSlideButtons = document.querySelectorAll("[data-change-slide-button]")
+const changeSlideButtons = document.querySelectorAll("[data-change-slide-button]");
+const slides = document.querySelector(".slides");
+
+let indexActiveSlide = 0;
+
+function showSlide(index) {
+  const activeSlide = slides.querySelector("[data-active]");
+  activeSlide.removeAttribute("data-active");
+
+  slides.children[index].dataset.active = true;
+}
+
+function nextSlide() {
+  indexActiveSlide = (indexActiveSlide + 1) % slides.children.length;
+  showSlide(indexActiveSlide);
+}
+
+function prevSlide() {
+  indexActiveSlide = (indexActiveSlide - 1 + slides.children.length) % slides.children.length;
+  showSlide(indexActiveSlide);
+}
 
 changeSlideButtons.forEach(button => {
   button.addEventListener("click", () => {
-    const slides = document.querySelector(".slides")
-    const activeSlide = slides.querySelector("[data-active]")
-    let indexActiveSlide = Array.from(slides.children).indexOf(activeSlide)
-
-    indexActiveSlide = button.dataset.changeSlideButton === "next" 
-    ?  indexActiveSlide + 1 
-    :  indexActiveSlide - 1
-
-    if (indexActiveSlide >= slides.children.length) {
-      indexActiveSlide = 0
+    if (button.dataset.changeSlideButton === "next") {
+      nextSlide();
+    } else {
+      prevSlide();
     }
+  });
+});
 
-    if (indexActiveSlide < 0) {
-      indexActiveSlide = slides.children.length - 1
-    }
+// Adicionando funcionalidade de troca automática a cada 3000 milissegundos (3 segundos)
+const autoChangeSlideInterval = setInterval(nextSlide, 3000);
 
-    activeSlide.removeAttribute("data-active")
-    slides.children[indexActiveSlide].dataset.active = true
-  })
-})
+// Se desejar parar a troca automática quando um botão for clicado, você pode adicionar o seguinte código:
+changeSlideButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    clearInterval(autoChangeSlideInterval);
+  });
+});

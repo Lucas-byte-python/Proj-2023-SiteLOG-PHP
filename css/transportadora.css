@@ -5,6 +5,21 @@
 }
 body {
     background-image: url(/img/banner-armazenagem.webp);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+body::-webkit-scrollbar {
+  width: 12px;            
+}
+
+body::-webkit-scrollbar-track {
+  background: gray;      
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0fc2ff;   
+  border-radius: 20px;      
+  border: 3px solid white; 
 }
 
 /* Esté é o menu em cima */
@@ -17,6 +32,7 @@ body {
     margin-left: 0.7rem;
 }
 ul li {
+    font-family: Helvetica;
     display: inline;
     float: right;
     padding-right: 3rem;
@@ -37,11 +53,11 @@ li {
     font-size: 2em;
     font-family: 'open_sansregular';
     transition:0.4s;
-    text-shadow: 0 0 0.125em rgba(53, 11, 243, 0.5), 0 0 0.25em currentColor;
+    text-shadow: 0 0 0.125em rgba(11, 73, 243, 0.5), 0 0 0.25em currentColor;
     box-shadow: inset 0 0 0.5em 0 var(--cor-azul), 0 0 0.5em 0 var(--cor-azul);
 }
 li :hover{
-    color: #8A2BE2;
+    color: #00ffff;
     transition:0.4s;
     text-shadow: none;
 }
@@ -57,21 +73,38 @@ li :before, li :after {
     transition: opacity 100ms linear;
     background-color: var(--cor-azul);
 }
-
 a {
     color: white;
     text-decoration: none;
 }
-
+.prim-h1{
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.prim-p{
+    color: #000;
+    font-family: Segoe UI;
+}
+.text{
+    color: #000;
+    font-family: Segoe UI !important;
+    font-size: 23px !important;
+}
+.mapa h1{
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 h1 {
     text-align: center;
     padding: 20px;
     font-size: 50px;
-    color: #8A2BE2;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
-    color: #000;
+    font-family: Segoe UI;
+    color: #ffffff;
     text-align: center;
     font-size: 20px;
     font-style: normal;
@@ -79,8 +112,9 @@ p {
     line-height: normal;
 }
 .fundo{
-    height: 700px;
-    background-color: rgb(226, 218, 218);
+    padding-top: 20px;
+    height: 800px;
+    background-color: white;
 }
 .img-2 {
     margin-top: 10px;
@@ -153,12 +187,12 @@ button {
 }
 .vantagens{
     width: 100%;
-    height: 390px;
-    background-color: rgb(226, 218, 218);
+    height: 450px;
+    background-color: #0fc2ff;
 }
 .posit-img{
-    margin-left: 1320px;
-    margin-top: -220px;
+    margin-left: 1330px;
+    margin-top: -300px;
     border-radius: 15px;
     animation-name: floating;
     animation-duration: 5s;
@@ -167,13 +201,13 @@ button {
 }
 .mapa{
     width: 100%;
-    height: 780px;
-    background-color: rgb(226, 218, 218);
+    height: 850px;
+    background-color: white;
 }
 .mais-inform{
     width: 100%;
-    height: 350px;
-    background-color: rgb(226, 218, 218);
+    height: 400px;
+    background-color: #0fc2ff;
 }
 .pouco-text{
     font-size: 30px;
@@ -186,12 +220,14 @@ button {
 .imagens{
     margin-left: 180px;
     padding: 10px;
+
 }
 .um_texto{
     font-size: 22px;
-    text-align: justify;
+    text-align: left;
     margin-top: -58px;
     margin-left: 280px;
+    margin-right: 600px;
 }
 .two-h1{
     padding: 20px;
@@ -202,6 +238,7 @@ button {
 .brasil-mapa{
     margin-left: 550px;
     padding: 20px;
+    margin-top: 30px;
     
 }
 .two-button{
@@ -211,8 +248,10 @@ button {
 /* Rodapé */
 .rodape{
     width: 100%;
-    height: 100%;
-    background-color: opacy;
+    height: auto;
+    background-image: url(/img/banner-armazenagem.webp);
+    background-position: cover;
+    background-repeat: no-repeat;
 }
 .contato{
     margin-left: -1450px;
@@ -239,11 +278,12 @@ button {
     margin-left: 10px;
 }
 .rodeer .rod{
-    margin-left: 1200px;
+    margin-left: 1450px;
     margin-top: -20px;
     margin-bottom: -50px;
     font-size: 17px;
     color: #ffffff;
+    text-align: left;
 }
 .rod-pe{
     margin-left: 1650px;
@@ -270,100 +310,235 @@ button {
         margin-left: 210px;
         font-size: 20px;
     }
-    .primeira-img{
-        height: 200px;
-        width: 100%;
+    li {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    border:4px solid var(--cor-azul);
+    position: relative;
+    text-transform: capitalize;
+    text-decoration:none;
+    color: var(--cor-azul);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: 'open_sansregular';
+    transition:0.4s;
+    text-shadow: 0 0 0.125em rgba(11, 73, 243, 0.5), 0 0 0.25em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--cor-azul), 0 0 0.5em 0 var(--cor-azul);
+    }
+    li :hover{
+        color: #00ffff;
+        transition:0.4s;
+        text-shadow: none;
+    }
+    li :hover:after {
+        opacity: 1;
+    }
+    li :hover:before {
+        opacity: 1;
+    }
+    li :before, li :after {
+        content: "";
+        position: absolute;
+        transition: opacity 100ms linear;
+        background-color: var(--cor-azul);
+    }
+    a {
+        color: white;
+        text-decoration: none;
     }
     .prim-h1{
-        font-size: 35px;
+        color: #000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        margin-top: -10px;
     }
     .prim-p{
+        color: #000;
+        font-family: Segoe UI;
         font-size: 15px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    .img-2{
-        height: 200px;
-        width: 200px;
-        margin-top: 5px;
-        margin-bottom: -80px;
-        margin-left: -12px;
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: center;
     }
     .text{
-        font-size: 10px;
-        margin-left: -620px;
-        margin-right: 420px;
-        margin-top: 440px;
-        margin-bottom: -80px;
+        color: #000;
+        font-family: Segoe UI !important;
+        font-size: 20px !important;
     }
-    .button-prim{
-        margin-left: -770px;
-        height: 30px;
-        width: 120px;
-        font-size: 15px;
-        margin-top: -200px;
+    .mapa h1{
+        color: #000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 50px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    p {
+        font-family: Segoe UI;
+        color: #ffffff;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .fundo{
+        padding-top: 20px;
+        height: 1320px;
+        background-color: white;
+    }
+    .img-2 {
+        margin-top: 10px;
+        margin-left: 40px;
+        animation-name: floating;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 15px); }
+        100%   { transform: translate(0, -0px); }   
+    }
+
+    .text {
+        text-align: justify;
+        font-size: 28px;
+        padding-right: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: -780px;
+        margin-right: 420px;
+        margin-top: 550px;
+    }
+
+    button {
+        --c: 		#8A2BE2;
+        /* the color*/
+
+        box-shadow: 0 0 0 .1em inset var(--c);
+        --_g: linear-gradient(var(--c) 0 0) no-repeat;
+        background:
+            var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+            var(--_g) calc(200% - var(--_p, 0%)) 0%,
+            var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+            var(--_g) calc(200% - var(--_p, 0%)) 100%;
+        background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+        outline-offset: .1em;
+        transition: background-size .4s, background-position 0s .4s;
+    }
+
+    button:hover {
+        --_p: 100%;
+        transition: background-position .4s, background-size 0s;
+    }
+
+    button:active {
+        box-shadow: 0 0 9e9q inset #0009;
+        background-color: var(--c);
+        color: #fff;
+    }
+
+    button {
+        font-family: system-ui, sans-serif;
+        font-size: 20px;
+        width: 200px;
+        height: 40px;
+        cursor: pointer;
+        padding: .1em .6em;
+        font-weight: bold;
+        border: none;
+        margin-left: -710px;
+        margin-top: -50px;
         border-radius: 20px;
+    }
+    .tudo{
+        margin-left: 800px;
+        margin-top: -540px;
+        margin-right: 200px;
+    }
+    .vantagens{
+        width: 100%;
+        height: 650px;
+        background-color: #0fc2ff;
     }
     .vantagens h1{
         font-size: 25px;
-        margin-bottom: -20px;
-        margin-top: 20px;
     }
-    .imagens{
-        margin-left: 0px;
-        width: 90px;
-        height: 90px;
-        padding: 15px;
-    }
-    .um_texto{
-        font-size: 15px;
-        margin-left: 90px;
-        margin-right: 30px;
-        margin-top: -70px;
-    }   
     .posit-img{
-        margin-left: -0px;
-        margin-top: 20px;
+        margin-left: 35px;
+        width: 300px;
         height: 200px;
-        width: 100%;
-        border-radius: 0;
-        animation: none;
+        margin-top: 20px;
+        border-radius: 15px;
+        animation-name: floating;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
     }
     .mapa{
-        height: 460px;
-    }
-    .mapa .two-h1{
-        font-size: 20px;
-        margin-left: 0px;
-        margin-right: -10px;
-        margin-top: 140px;
+        width: 100%;
+        height: 550px;
+        background-color: white;
     }
     .mais-inform{
-        height: 230px;
+        width: 100%;
+        height: 400px;
+        background-color: #0fc2ff;
     }
     .mais-inform h1{
         font-size: 20px;
     }
     .pouco-text{
-        font-size: 13px;
-        margin-left: -10px;
-        margin-right: -10px;
-        margin-top: -20px;
-    }
-    .two-button{
-        margin-left: 30px;
-        width: 300px;
-        height: 30px;
         font-size: 15px;
-        margin-top: -20px;
-        border-radius: 15px;
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 25px; 
+    }
+    .imagens{
+        margin-left: 10px;
+        padding: -200px;
+    }
+    .um_texto{
+        font-size: 15px;
+        text-align: justify;
+        margin-top: -68px;
+        margin-left: 100px;
+        margin-right: 20px;
+    }
+    .two-h1{
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 20px;
     }
     .brasil-mapa{
-        margin-left: -40px;
+        margin-left: 10px;
+        padding: 20px;
+        margin-top: 10px;
+        width: 350px;
         height: 350px;
+        
+    }
+    .two-button{
+        margin-left: 80px;
+        margin-top: 20px;
+        font-size: 15px;
     }
     .rodape{
-        height: 377px;
+        height: 477px;
+        background-image: url(banner-armazenagem.webp);
     }   
     .contato{
         margin-left: 20px;

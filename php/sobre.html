@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,20 @@
   *{margin: 0; padding: 0; box-sizing: border-box;}
 
 body{
-    background-color: rgb(226, 218, 218);
+    background-color: white;
+}
+body::-webkit-scrollbar {
+  width: 12px;            
+}
+
+body::-webkit-scrollbar-track {
+  background: gray;      
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0fc2ff;   
+  border-radius: 20px;      
+  border: 3px solid white; 
 }
 /* Esté é o menu em cima */
 .menu{
@@ -32,6 +45,7 @@ ul li{
     padding-right: 3rem;
     margin-top: 70px;
     margin-right: 10px;
+    font-family: Helvetica;
 }
 li{
     font-size: 30px;
@@ -50,7 +64,7 @@ li{
     box-shadow: inset 0 0 0.5em 0 var(--cor-azul), 0 0 0.5em 0 var(--cor-azul);
 }
 li :hover{
-    color: #8A2BE2;
+    color: #00ffff;
     transition:0.4s;
     text-shadow: none;
 }
@@ -71,26 +85,24 @@ a{
     color: #ffffff;
 }
 .linha-01{
-    background-color: rgb(226, 218, 218);
+    background-color: white;
     height: 154px;
 }
 .titulo{
     text-align: center;
-    color: #8A2BE2;
-    font-family: Playfair Display;
+    color: #000000;
+    font-family: Helvetica;
     font-size: 50px;
     font-style: normal;
-    font-weight: 900;
     line-height: normal;
     padding: 20px;
 }
 .sub-titulo{
     text-align: center;
     color: #000;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 22px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-top: -10px;
 }
@@ -127,15 +139,17 @@ a{
 
 .quem-somos{
     width: 100%;
-    height: 388px;
+    height: 450px;
+}
+.quem-somos img{
+    margin-top: -500px;
 }
 .titulos-menores{
-    color: #8A2BE2;
+    color: #000000;
     text-align: justify;
-    font-family: Playfair Display;
+    font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
-    font-weight: 900;
     line-height: normal;
     padding: 20px;
     margin-left: 1150px;
@@ -144,10 +158,9 @@ a{
 .pequeno-texto{
     color: #000;
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 30px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     text-align: justify;
     margin-left: 900px;
@@ -168,28 +181,26 @@ a{
     animation-timing-function: ease-in-out;
 }
 .missao{
-    height: 388px;
-    background-color: rgb(226, 218, 218);
+    height:  450px;
+    background-color: #0fc2ff;
     width: 100%;
 }
 .missao h1{
-    color: #8A2BE2;
+    color: #ffffff;
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
-    font-weight: 900;
     line-height: normal;
     margin-left: 400px;
     padding: 30px;
 }
 .missao p{
-    color: #000;
+    color: #ffffff;
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 27px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-left: 100px;
     margin-right: 900px;
@@ -210,40 +221,40 @@ a{
 }
 .ambiente{
     width: 100%;
-    height: 388px;
+    height: 450px;
 }
 .ambiente h1{
-    color: #8A2BE2;
+    color: #000000;
     text-align: center;
-    font-family: Playfair Display;
+    font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
-    font-weight: 900;
     line-height: normal;
     padding: 3px;
     margin-left: 1050px;
     margin-right: 350px;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 .ambiente p{
     color: #000;
     text-align: justify;
-    font-family: Montserrat;
-    font-size: 30px;
+    font-family: Helvetica;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     text-align: justify;
     margin-left: 900px;
     margin-right: 200px;
     padding: 20px;
+    margin-top: 20px;
 }
 .ambiente img{
     border-radius: 20px;
     width: 517px;
     height: 340px;
     flex-shrink: 0;
-    margin-top: -415px;
+    margin-top: -915px;
     margin-left: 200px;
     box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
     animation-name: floating;
@@ -253,27 +264,25 @@ a{
 }
 .cliente{
     width: 100%;
-    height: 388px;
-    background-color: rgb(226, 218, 218);
+    height: 450px;
+    background-color: #0fc2ff;
 }
 .cliente h1{
-    color: #8A2BE2;
+    color: #ffffff;
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
-    font-weight: 900;
     line-height: normal;
     margin-left: 400px;
     padding: 30px;
 }
 .cliente p{
-    color: #000;
+    color: rgb(255, 255, 255);
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 27px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-left: 100px;
     margin-right: 900px;
@@ -293,16 +302,15 @@ a{
     animation-timing-function: ease-in-out;
 }
 .confianca{
-    height: 388px;
+    height: 450px;
     width: 100%;
 }
 .confianca h1{
-    color: #8A2BE2;
+    color: #000000;
     text-align: center;
-    font-family: Playfair Display;
+    font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
-    font-weight: 900;
     padding-top: 20px;
     line-height: normal;
     margin-left: 1050px;
@@ -312,10 +320,9 @@ a{
 .confianca p{
     color: #000;
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 30px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     text-align: justify;
     margin-left: 900px;
@@ -337,28 +344,26 @@ a{
     animation-timing-function: ease-in-out;
 }
 .historia{
-    height: 410px;
-    background-color: rgb(226, 218, 218);
+    height: 450px;
+    background-color: #494855;
     width: 100%;
 }
 .historia h1{
-    color: #8A2BE2;
+    color: #60dde2;
     text-align: justify;
-    font-family: Playfair Display;
+    font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
-    font-weight: 900;
     line-height: normal;
     margin-left: 150px;
     padding: 10px;
 }
 .historia p{
-    color: #000;
+    color: #fff;
     text-align: justify;
-    font-family: Montserrat;
-    font-size: 20px;
+    font-family: Helvetica;
+    font-size: 18px !important;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-left: 120px;
     margin-right: 120px;
@@ -372,18 +377,21 @@ a{
     background-repeat: no-repeat;
 }
 .contato{
+    font-family: Helvetica;
     margin-left: 200px;
     color: #ffffff;
     padding: 25px; 
     font-size: 40px;
 }
 .gmail{
+    font-family: Helvetica;
     margin-left: 80px;
     margin-top: -40px;
     color: #ffffff;
     font-size: 22px;
 }
 .whats{
+    font-family: Helvetica;
     margin-left: 80px;
     margin-top: -55px;
     color: #ffffff;
@@ -396,6 +404,7 @@ a{
     margin-left: 10px;
 }
 .rodeer .rod{
+    font-family: Helvetica;
     margin-left: 1400px;
     margin-top: -20px;
     margin-bottom: -50px;
@@ -406,13 +415,701 @@ a{
     margin-left: 1650px;
     margin-top: -100px;
 }
+/* Responsividade para 320px á 600px obs: celular */
+@media (min-width: 320px) and (max-width: 600px) {
+    body{
+        height: auto;
+    }
+    .menu {
+      height: auto;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .menu img {
+      margin-top: -150px;
+      margin-left: 0px;
+    }
+    
+    ul li {
+      display: block;
+      float: none;
+      padding-right: 0;
+      margin-top: 10px;
+      margin-right: 0;
+      text-align: center;
+      margin-left: 210px;
+      font-size: 20px;
+    }
+    .titulo{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .sub-titulo{
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .imagem-pequena{
+        margin-left: 130px;
+        margin-top: 20px;
+    }
+    .imagem-pequena-two{
+        margin-left: -240px;
+        margin-top: 20px;
+    }
+    .quem-somos .titulos-menores{
+        margin-left: 100px;
+        font-size: 15px;
+        margin-top: 90px;
+    }
+    .quem-somos .pequeno-texto{
+        margin-left: 20px;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .quem-somos .imagens-pequenas{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    .quem-somos{
+        height: 430px;
+    }
+    .missao h1{
+        margin-left: 100px;
+        font-size: 15px;
+        margin-top: 90px;
+    }
+    .missao p{
+        margin-left: 20px;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .missao img{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    .missao{
+        height: 550px;
+    }
+    .ambiente h1{
+        margin-left: 50px;
+        font-size: 15px;
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+    .ambiente p{
+        margin-left: 20px;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .ambiente img{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    .ambiente{
+        height: 550px;
+    }
+    .cliente h1{
+        margin-left: 50px;
+        font-size: 15px;
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+    .cliente p{
+        margin-left: 20px;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .cliente img{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    .cliente{
+        height: 550px;
+    }
+     .confianca h1{
+        margin-left: 50px;
+        font-size: 15px;
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+    .confianca p{
+        margin-left: 20px;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .confianca img{
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    .confianca{
+        height: 550px;
+    }
+    .historia h1{
+        margin-left: 130px;
+        font-size: 15px;
+        margin-top: 30px;
+        margin-right: 100px;
+        font-size: 20px;
+    }
+    .historia p{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .historia{
+        height: 800px;
+    }
+    .historia p .histo-resp{
+        font-size: 10px;
+    }
+    .rodape {
+      height: 453px;
+      background-image: url(menu.jpg);
+      background-size: 1900px 1900px;
+      background-position: center;
+    }
+    
+    .contato {
+      margin-left: 60px;
+      font-size: 30px;
+    }
+    .posic{
+        margin-left: 70px;
+        padding-top: 10px;
+    }
+    .posic-2{
+        margin-left: 57px;
+        padding-top: 10px;
+        padding: -2px;
+    }
+    .gmail{
+        margin-left: 140px;
+        margin-top: -45px;
+        font-size: 16px;
+    }
+    .whats {
+        margin-left: 140px;
+        margin-top: -50px;
+        font-size: 16px;
+        margin-bottom: 15px
+    }
+    
+    .rodeer .rod {
+      padding: -10px;
+      margin-left: 260px;
+      padding-top: 20px;
+      margin-top: -5px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      font-size: 14px;
+    }
+    
+    .rod-pe {
+      margin-left: 40px;
+      margin-top: -150px;
+      margin-bottom: 30px;
+      width: 160px;
+      height: 160px;
+    }
+}
+/* Responsividade de 1000px á 1200px obr: Tablet*/
+@media (min-width: 1000px) and (max-width: 1200px){
+    .menu{
+      width: 100%;
+      height: 160px;
+      margin-bottom: auto;
+    }
+    
+    .menu img {
+      margin-top: -10px;
+      margin-left: 20px;
+    }
+    
+    ul li {
+      display: inline;
+      float: right;
+      padding-right: 3rem;
+      margin-top: 60px;
+      margin-right: 10px;
+    }
+    .imagem-pequena{
+        margin-left: 5px;
+    }
+    .imagem-pequena-two{
+        margin-left: 650px;
+    }
+    .linha-01 .titulo{
+        font-size: 35px;
+    }
+    .linha-01 .sub-titulo{
+        font-size: 20px;
+    }
+    .quem-somos .titulos-menores{
+        margin-left: 350px;
+        font-size: 35px;
+    }
+    .quem-somos .pequeno-texto{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .quem-somos .imagens-pequenas{
+        margin-top: 20px;
+        margin-left: 200px;
+        width: 650px;
+        height: 500px;
+    }
+    .quem-somos{
+        height: 900px;
+    }
+    .missao h1{
+        margin-left: 350px;
+        font-size: 35px;
+    }
+    .missao p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .missao img{
+        margin-top: 20px;
+        margin-left: 200px;
+        width: 650px;
+        height: 500px;
+    }
+    .missao{
+        height: 900px;
+    }
+    .ambiente h1{
+        margin-left: 250px;
+        margin-right: 250px;
+        font-size: 35px;
+    }
+    .ambiente p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .ambiente img{
+        margin-top: 20px;
+        margin-left: 200px;
+        width: 650px;
+        height: 500px;
+    }
+    .ambiente{
+        height: 900px;
+    }
+    .cliente h1{
+        margin-left: 250px;
+        margin-right: 250px;
+        font-size: 35px;
+    }
+    .cliente p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .cliente img{
+        margin-top: 20px;
+        margin-left: 200px;
+        width: 650px;
+        height: 500px;
+    }
+    .cliente{
+        height: 900px;
+    }
+    .confianca h1{
+        margin-left: 250px;
+        margin-right: 250px;
+        font-size: 35px;
+    }
+    .confianca p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .confianca img{
+        margin-top: 20px;
+        margin-left: 200px;
+        width: 650px;
+        height: 500px;
+    }
+    .confianca{
+        height: 900px;
+    }
+    .historia{
+        height: 700px;
+    }
+}
+/* Responsividade de 700 á 900 obs: IPads*/
+@media (min-width: 700px) and (max-width: 900px){
+  .menu{
+      width: 100%;
+      height: 230px;
+      margin-bottom: auto;
+      margin-bottom: -70px;
+    }
+    
+    .menu img {
+      margin-top: -10px;
+      margin-left: 20px;
+      width: 170px;
+      height: 170px;
+    }
+    
+    ul li {
+      display: inline;
+      float: right;
+      padding-right: 3rem;
+      margin-top: 60px;
+      margin-right: 1px;
+      font-size: 25px;
+    }
+
+    .linha-01 .titulo{
+        font-size: 25px;
+    }
+
+    .linha-01 .imagem-pequena{
+        margin-left: 70px;
+        margin-top: 30px;
+    }
+    .quem-somos .titulos-menores{
+        margin-left: 250px;
+        margin-top: 120px;
+        font-size: 25px;
+    }
+    .quem-somos .pequeno-texto{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .quem-somos .imagens-pequenas{
+        margin-top: 30px;
+        margin-right: 125px;
+        margin-left: 125px;
+    }
+    .quem-somos{
+        height: 750px;
+    }
+    .missao h1{
+        margin-left: 250px;
+        margin-top: 120px;
+        font-size: 25px;
+    }
+    .missao p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .missao img{
+        margin-top: 30px;
+        margin-right: 125px;
+        margin-left: 125px;
+    }
+    .missao{
+        height: 850px;
+    }
+    .ambiente h1{
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    .ambiente p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .ambiente img{
+        margin-top: 30px;
+        margin-right: 125px;
+        margin-left: 125px;
+    }
+    .ambiente{
+        height: 750px;
+    }
+    .cliente h1{
+        margin-left: 180px;
+        margin-right: 200px;
+        margin-top: 120px;
+        font-size: 25px;
+    }
+    .cliente p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .cliente img{
+        margin-top: 30px;
+        margin-right: 125px;
+        margin-left: 125px;
+    }
+    .cliente{
+        height: 850px;
+    }
+    .confianca h1{
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .confianca p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .confianca img{
+        margin-top: 30px;
+        margin-right: 125px;
+        margin-left: 125px;
+    }
+    .confianca{
+        height: 850px;
+    }
+    .historia{
+        height: 900px;
+    }
+    .historia h1{
+        font-size: 25px;
+        margin-left: 300px;
+        margin-right: 250px;
+    }
+    .linha-01 .imagem-pequena-two{
+        margin-left: 250px;
+    }
+
+    .rodape {
+      height: 410px;
+      background-image: url(menu.jpg);
+      background-size: 1900px 1000px;
+    }
+    
+    .contato {
+      margin-left: 220px;
+      font-size: 40px;
+    }
+    .posic{
+        margin-left: 230px;
+        padding-top: 10px;
+    }
+    .posic-2{
+        margin-left: 217px;
+        padding-top: 10px;
+        padding: -2px;
+    }
+    .gmail{
+        margin-left: 300px;
+        margin-top: -50px;
+        font-size: 20px;
+    }
+    .whats {
+        margin-left: 300px;
+        margin-top: -60px;
+        font-size: 20px;
+        margin-bottom: 15px
+    }
+    
+    .rodeer .rod {
+      padding: -10px;
+      margin-left: 650px;
+      margin-right: -2px;
+      padding-top: 0px;
+      margin-top: -100px;
+      margin-bottom: 110px;
+      font-size: 17px;
+    }
+    
+    .rod-pe {
+      margin-left: 0px;
+      margin-top: -1200px;
+      margin-bottom: 120px;
+      width: 200px;
+      height: 200px;
+      float: none;
+    }
+}
+/* Responsividade de 1250px á 1400px obr: Tablet*/
+@media (min-width: 1250px) and (max-width: 1400px){
+    .menu{
+      width: 100%;
+      height: 160px;
+      margin-bottom: auto;
+    }
+    
+    .menu img {
+      margin-top: -10px;
+      margin-left: 20px;
+    }
+    
+    ul li {
+      display: inline;
+      float: right;
+      padding-right: 3rem;
+      margin-top: 65px;
+      margin-right: 10px;
+    }
+    .linha-01 .imagem-pequena{
+        margin-left: 20px;
+    }
+    .linha-01 .imagem-pequena-two{
+        margin-left: 900px;
+    }
+    .quem-somos .titulos-menores{
+        margin-left: 500px;
+        margin-top: 100px;
+        font-size: 40px;
+    }
+    .quem-somos .pequeno-texto{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .quem-somos .imagens-pequenas{
+        margin-top: 30px;
+        margin-right: 400px;
+        margin-left: 400px;
+    }
+    .quem-somos{
+        height: 750px;
+    }
+    .missao h1{
+        margin-left: 500px;
+        margin-top: 120px;
+        font-size: 40px;
+    }
+    .missao p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .missao img{
+        margin-top: 30px;
+        margin-right: 400px;
+        margin-left: 400px;
+    }
+    .missao{
+        height: 850px;
+    }
+    .ambiente h1{
+        margin-left: 300px;
+        margin-right: 300px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .ambiente p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .ambiente img{
+        margin-top: 30px;
+        margin-right: 400px;
+        margin-left: 400px;
+    }
+    .ambiente{
+        height: 750px;
+    }
+    .cliente h1{
+        margin-left: 350px;
+        margin-right: 350px;
+        margin-top: 120px;
+        font-size: 40px;
+    }
+    .cliente p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .cliente img{
+        margin-top: 30px;
+        margin-right: 400px;
+        margin-left: 400px;
+    }
+    .cliente{
+        height: 750px;
+    }
+    .confianca h1{
+        margin-left: 350px;
+        margin-right: 350px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .confianca p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .confianca img{
+        margin-top: 30px;
+        margin-right: 400px;
+        margin-left: 400px;
+    }
+    .confianca{
+        height: 750px;
+    }
+    .historia h1{
+        font-size: 35px;
+        margin-left: 550px;
+        margin-right: 550px;
+    }
+    .historia{
+        height: 600px;
+    }
+    .rodape {
+      height: 230px;
+      background-image: url(menu.jpg);
+      background-size: 1900px 1200px;
+    }
+    
+    .contato {
+      margin-left: 470px;
+      font-size: 40px;
+    }
+    .posic{
+        margin-left: 350px;
+        padding-top: 10px;
+    }
+    .posic-2{
+        margin-left: 337px;
+        padding-top: 10px;
+        padding: -2px;
+    }
+    .gmail{
+        margin-left: 430px;
+        margin-top: -50px;
+        font-size: 25px;
+    }
+    .whats {
+        margin-left: 430px;
+        margin-top: -60px;
+        font-size: 25px;
+        margin-bottom: 15px
+    }
+    
+    .rodeer .rod{
+      padding: -10px;
+      text-align: right;
+      margin-left: 700px;
+      margin-right: 10px;
+      padding-top: 0px;
+      margin-top: -20px;
+      margin-bottom: -70px;
+      font-size: 21px;
+    }
+    
+    .rod-pe {
+      margin-left: 50px;
+      margin-top: -2000px;
+      margin-bottom: -100px;
+      width: 220px;
+      height: 220px;
+      float: none;
+    }
+}
 </style>
     <header class="menu">
         <ul>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="logar.php">Login</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="transportadora.html">Transportadores</a></li>
-          <li><a href="cadastro-home.php">Home</a></li>
+          <li><a href="home_site.html">Home</a></li>
         </ul>
         <img src="logo.png" width="200px" height="190px">   
     </header>
@@ -435,7 +1132,7 @@ a{
     <div class="ambiente">
       <h1>Nossa importância com o meio ambiente:</h1>
       <p> Além disso, acreditamos na importância da sustentabilidade ambiental. Buscamos constantemente maneiras de reduzir nossa pegada de carbono e promover práticas de transporte mais sustentáveis. Ao escolher a Explore Purchase como seu parceiro de logística, você também está fazendo uma escolha consciente para um futuro mais verde.</p>
-      <img src="sustentabilidade.jpg" alt="">
+      <img src="sustentabilidade.jpg">
     </div>
     <div class="cliente">
       <h1>Relação com o Cliente:</h1>
@@ -449,7 +1146,8 @@ a{
     </div>
     <div class="historia">
       <h1>História:</h1>
-      <p>A história da "Explore Purchase" remonta ao ano de 2005, quando Lucas Santil e João Hélio, dois jovens empreendedores com experiência no setor de logística, decidirão fundar sua própria empresa. Eles perceberão que havia uma demanda crescente por serviços logísticos de qualidade, mas muitas empresas estavam enfrentando desafios para atender a essas demandas de maneira eficiente.
+      <br>
+      <p><span class="histo-resp">A história da "Explore Purchase" remonta ao ano de 2005, quando Lucas Santil e João Hélio, dois jovens empreendedores com experiência no setor de logística, decidirão fundar sua própria empresa. Eles perceberão que havia uma demanda crescente por serviços logísticos de qualidade, mas muitas empresas estavam enfrentando desafios para atender a essas demandas de maneira eficiente.
       <br><br>
       Com essa percepção, eles reunirão uma equipe de profissionais altamente qualificados e apaixonados pelo setor de logística. Juntos, eles começaram a desenvolver soluções personalizadas para atender às necessidades específicas de cada cliente. A empresa adotou uma abordagem inovadora, utilizando tecnologia de ponta para otimizar os processos de transporte, rastreamento e armazenamento de mercadorias.
       <br><br>
@@ -457,22 +1155,22 @@ a{
       <br><br>
       Ao longo dos anos, a "Explore Purchase" expandiu suas operações, estabelecendo parcerias estratégicas em diferentes países e investindo em infraestrutura de ponta. A empresa continua a se reinventar e a se adaptar às mudanças do mercado, buscando sempre estar na vanguarda da indústria de logística.
       <br><br>
-      Hoje, a "Explore Purchase" é reconhecida como uma das principais empresas de logística do mundo, oferecendo soluções abrangentes e eficientes para seus clientes. Seu compromisso com a excelência e a inovação permitiu que a empresa crescesse e se tornasse um importante player do setor, atendendo às demandas crescentes de um mercado globalizado e em constante evolução.  </p>
+      Hoje, a "Explore Purchase" é reconhecida como uma das principais empresas de logística do mundo, oferecendo soluções abrangentes e eficientes para seus clientes. Seu compromisso com a excelência e a inovação permitiu que a empresa crescesse e se tornasse um importante player do setor, atendendo às demandas crescentes de um mercado globalizado e em constante evolução.</span></p>
     </div>
     <!-- Rodapé -->
     <header class="rodape">
         <p class="contato">Entre em Contato:</p>
         <img class="posic" src="gmail-logo.webp" width="45px" height="45px">
-        <p class="gmail"> <a href="mailto:"> E-mail: <u>explorepurchase@gmail.com</u></a></p>
+        <p class="gmail"> <a href="mailto:"> E-mail: explorepurchase@gmail.com</a></p>
         <img class="posic-2" src="whatsapp-logo.jpg" width="70px" height="70px">
-        <p class="whats">Whatsapp: <u>+55 85 9 9320-5061</u></p>
+        <p class="whats">Whatsapp: +55 85 9 9320-5061</p>
       <div class="rodeer">
-        <p class="rod"><a href="">Políticas de Privacidade</a></p>
-        <p class="rod"><a href="">Termos de Uso</a></p>
-        <p class="rod"><a href="sobre.html">Fale Conosco</a></p>
-        <p class="rod"><a href="cadastro-home.php">Perguntas Frequentes</a></p>
+        <p class="rod"><a href="">Perguntas Frequentes</a></p>
+        <p class="rod"><a href="">Fale Conosco</a></p>
+        <p class="rod"><a href="termos.html">Termos de Uso</a></p>
+        <p class="rod"><a href="politica_priv.html">Políticas de Privacidade</a></p>
       </div>
       <img class="rod-pe" src="logo.png" width="200px" height="200px">
-      </header>
+    </header>
 </body>
 </html>
