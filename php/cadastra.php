@@ -1,37 +1,39 @@
 <?php
-include('login.php');
+if(isset($_POST['submit']))
+{
+    include_once('cadastro.php');
 
-if (isset($_POST['email']) && isset($_POST['senha'])) {
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = $mysqli->real_escape_string($_POST['senha']);
-
-    $sql_code = "SELECT * FROM cadastro_usu WHERE email = '$email' AND senha = '$senha'";
-    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
-
-    $quantidade = $sql_query->num_rows;
-
-    if ($quantidade == 1) {
-
-        $login_usu = $sql_query->fetch_assoc();
-
-        if (!isset($_SESSION)) {
-            session_start();
-        }
-
-        header("Location: telaconclusao.php");
-        exit(); // Certifique-se de sair após o redirecionamento para evitar execução adicional de código
-
+    // Verificar se o usuário já existe
+    $check_user_query = mysqli_query($conexao, "SELECT * FROM cadastro_usu WHERE email = '$email'");
+    if(mysqli_num_rows($check_user_query) > 0) {
+        // O usuário já existe, exibir popup ou mensagem
+        $mensagem = "O usuário com o e-mail $email já existe. Por favor, escolha outro e-mail.";
     } else {
-        $mensagem = "E-mail ou senha incorretos";
+        // O usuário não existe, proceder com a inserção
+        $result = mysqli_query($conexao, "INSERT INTO cadastro_usu(nome,cpf,telefone,email,senha) 
+        VALUES ('$nome','$cpf','$telefone','$email','$senha')");
+
+        if($result) {
+            // Redirecionar para telaconclusao.php
+            header("Location: telaconclusao2.php");
+            exit(); // Certifique-se de sair após o redirecionamento para evitar execução adicional de código
+        } else {
+            // Se ocorrer um erro durante a inserção, você pode lidar com isso aqui
+            echo "Erro ao cadastrar usuário. Por favor, tente novamente.";
+        }
     }
 }
 ?>
-
 <!doctype html>
 <html lang="pt-br">
 <head>
-<title>Login</title>
+<title>Cadastro</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -565,30 +567,32 @@ body::-webkit-scrollbar-thumb {
 </header> 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="logar.php" method="post" onsubmit="return validarFormulario_2()">
+            <form action="cadastra.php" method="post">
                 <h1>Criar Conta</h1>
                 <span>Preencha os requisitos abaixo.</span>
-                <input type="text" name="nome" id="nome" placeholder="Name:">
-                <input type="text" name="cpf" id="cpf" placeholder="CPF:">
-                <input type="text" name="telefone" id="telefone"  placeholder="Telefone:">
-                <input type="email" name="email" id="email"  placeholder="Email:">
-                <input type="password" name="senha" id="senha"  placeholder="Senha:">
+                <input type="text" name="nome" id="nome" placeholder="Name:" required>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF:" re>
+                <input type="text" name="telefone" id="telefone"  placeholder="Telefone:" required>
+                <input type="email" name="email" id="email"  placeholder="Email:" required>
+                <input type="password" name="senha" id="senha"  placeholder="Senha:" required>
                 <button><input name="submit" type="submit" id="submit"></button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="logar.php" method="post" onsubmit="return validarFormulario()">
-                <h1>Entre na sua Conta</h1>
-                <span>Use seu email e senha para logar.</span>
+        <form action="cadastra.php" method="post">
+                <h1>Criar Conta</h1>
+                <span>Preencha os requisitos abaixo.</span>
                 <?php
                 // Mostrar mensagem de erro, se existir
                 if (isset($mensagem)) {
-                    echo "<p>$mensagem</p>";
+                    echo "<p><b>$mensagem</b></p>";
                 }
                 ?>
-                <input type="email" id="email" name="email" placeholder="Email:">
-                <input type="password" id="senha" name="senha" placeholder="Senha:">
-                <a href="#">Esqueceu sua senha?</a>
+                <input type="text" name="nome" id="nome" placeholder="Name:" required>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF:" re>
+                <input type="text" name="telefone" id="telefone"  placeholder="Telefone:" required>
+                <input type="email" name="email" id="email"  placeholder="Email:" required>
+                <input type="password" name="senha" id="senha"  placeholder="Senha:" required>
                 <button><input name="submit" type="submit" id="submit"></button>
             </form>
         </div>
@@ -597,16 +601,17 @@ body::-webkit-scrollbar-thumb {
                 <div class="toggle-panel toggle-left">
                     <h1>Bem-vindo de volta!</h1>
                     <p>Conecte-se na sua conta para receber nossas notificações.</p>
-                    <button class="hidden" id="login">Logar na minha conta</button>
+                    <button class="hidden" id="login"><a href="logar.php">Logar na minha conta</a></button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <h1>Olá, seja Bem-Vindo!</h1>
-                    <p>Crie sua conta para receber nossas notificações.</p>
-                    <a href="cadastra.php"><button class="hidden" id="register">Cadastre-se</button></a>
+                    <h1>Olá, seja Bem-Vindo de Volta!</h1>
+                    <p>Entre na sua conta para receber nossas notificações.</p>
+                    <a href="logar.php"><button class="hidden" id="register">Logar na conta!</button></a>
                 </div>
             </div>
         </div>
     </div>
+    
 <script>
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');

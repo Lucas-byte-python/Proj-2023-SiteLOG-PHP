@@ -11,7 +11,10 @@
   <div class="container">
     <img src="gifzao.gif">
     <h1>Obrigado e Seja Bem-Vindo!</h1>
-    <p>Seu login foi realizado com sucesso.</p>
+    <?php
+    echo '';
+    ?>
+    <p>Seu cadastro foi realizado com sucesso.</p>
     <button class="glow-on-hover"><a href="home_site.html">Voltar a página inicial.</a></button>
   </div>
 <style>
