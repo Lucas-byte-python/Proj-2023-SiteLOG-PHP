@@ -571,7 +571,7 @@ body::-webkit-scrollbar-thumb {
                 <h1>Criar Conta</h1>
                 <span>Preencha os requisitos abaixo.</span>
                 <input type="text" name="nome" id="nome" placeholder="Name:" required>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF:" re>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF:" required>
                 <input type="text" name="telefone" id="telefone"  placeholder="Telefone:" required>
                 <input type="email" name="email" id="email"  placeholder="Email:" required>
                 <input type="password" name="senha" id="senha"  placeholder="Senha:" required>
@@ -589,7 +589,7 @@ body::-webkit-scrollbar-thumb {
                 }
                 ?>
                 <input type="text" name="nome" id="nome" placeholder="Name:" required>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF:" re>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF:" required>
                 <input type="text" name="telefone" id="telefone"  placeholder="Telefone:" required>
                 <input type="email" name="email" id="email"  placeholder="Email:" required>
                 <input type="password" name="senha" id="senha"  placeholder="Senha:" required>

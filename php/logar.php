@@ -586,8 +586,8 @@ body::-webkit-scrollbar-thumb {
                     echo "<p>$mensagem</p>";
                 }
                 ?>
-                <input type="email" id="email" name="email" placeholder="Email:">
-                <input type="password" id="senha" name="senha" placeholder="Senha:">
+                <input type="email" id="email" name="email" placeholder="Email:" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha:" required>
                 <a href="#">Esqueceu sua senha?</a>
                 <button><input name="submit" type="submit" id="submit"></button>
             </form>
